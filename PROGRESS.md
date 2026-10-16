@@ -12,6 +12,13 @@ Entry format:
 - Next: ...
 ```
 
+## 2026-10-15 — Plan 0001 slice 3: install basics
+- Done: app manifest, original basketball icon (SVG + 192/512/180 PNG, drawn by `scripts/make-icons.mjs` from one set of shapes), offline cache (a build step lists every built file; the cache only runs in the built app). New `npm run preview` (build, then serve the built app). Unit tests run the generated worker against fake browser parts.
+- Checked by hand in real Edge (throwaway Playwright in scratchpad, not added to repo): offline reload of `/` and `/dev` works at 390×844 and 1280×800, manifest icons load at their stated sizes, no console errors. Playtester skipped: the repo's Playwright harness arrives in slice 4.
+- Note: phones on home Wi-Fi (`dev:lan`) use plain http, so Android won't fully install and the offline cache won't run there; desktop and localhost do. Proper https hosting is M6.
+- PR: feat/0001-install-basics (slice 3)
+- Next: slice 4, screenshot harness (turn the hand check above into a real Playwright test). Owner request: add `npm run preview` to the CLAUDE.md command list.
+
 ## 2026-10-15 — Plan 0001 slice 2: web app shell
 - Done: `packages/web` (Vite 8.3.4, React 19.3.1, hand-written router): home with GM/Career/Dynasty "Coming soon" tiles, `/dev` gallery placeholder, not-found page. New commands `dev`, `dev:lan`, `build`; `verify` now ends with a production build. Playtester PASS at 390×844 and 1280×800 (no sideways scroll, no console errors, targets ≥ 44 px).
 - Note: the owner's CLAUDE.md command-list edit is still uncommitted locally; agents are blocked from committing protected files, so the owner commits it.
