@@ -12,6 +12,12 @@ Entry format:
 - Next: ...
 ```
 
+## 2026-10-15 — Plan 0001 slice 1: clean-checkout check, lint and formatting
+- Done: fresh clone of main passes `npm ci` + `verify` (Node 24, npm 9.9). Added Biome 2.5.15 (`npm run lint`, `npm run format`); lint runs first in `verify`. Protected files excluded from Biome. Added `.gitattributes` (LF everywhere) so the format check agrees on Windows. One-time format touched one file.
+- Note: `npm audit` reports 3 issues in the existing vitest 3 chain (already on main, not from Biome); fixing needs a vitest major bump, which needs a plan.
+- PR: feat/0001-foundation (slice 1)
+- Next: slice 2, the web app shell. Owner request: add `npm run lint` and `npm run format` to the CLAUDE.md command list.
+
 ## 2026-10-15 — Plan 0001 (M0 Foundation) proposed
 - Done: planner wrote docs/plans/0001-foundation.md (6 slices: lint/format + clean-checkout check, web shell, install basics, Playwright screenshots, save storage/versions, export/import + /dev save panel).
 - PR: plan PR on branch plan/0001-foundation
