@@ -12,6 +12,11 @@ Entry format:
 - Next: ...
 ```
 
+## 2026-10-15 — Plan 0001 (M0 Foundation) proposed
+- Done: planner wrote docs/plans/0001-foundation.md (6 slices: lint/format + clean-checkout check, web shell, install basics, Playwright screenshots, save storage/versions, export/import + /dev save panel).
+- PR: plan PR on branch plan/0001-foundation
+- Next: owner reviews and merges the plan PR (3 decisions, 2 protected-file requests inside); then build slice 1.
+
 ## 2026-10-15 — Starter kit created
 - Done: design doc, roadmap, plan-first workflow, agents, CI and plan gate, minimal `sim` package.
 - Next: run the kickoff prompt in RUNBOOK.md so the planner writes plan 0001 for milestone M0.
