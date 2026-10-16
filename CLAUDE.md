@@ -13,6 +13,7 @@ True Shot is a fictional-content basketball game (GM, Career and Dynasty modes) 
 - `npm run dev` - dev build
 - `npm run dev:lan` - dev lan build
 - `npm run build` - builds
+- `npm run preview` - preview
 - More commands (`dev`, `sim:batch`, Playwright) appear as plans add them. Update this list through a plan request.
 
 ## The workflow: PLAN → APPROVE → BUILD → VERIFY → PR
