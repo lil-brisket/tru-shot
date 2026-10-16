@@ -68,7 +68,9 @@ describe('createRng', () => {
     for (let i = 0; i < 500; i++) used.next();
     const a = fresh.fork('team-1');
     const b = used.fork('team-1');
-    expect(Array.from({ length: 10 }, () => a.next())).toEqual(Array.from({ length: 10 }, () => b.next()));
+    expect(Array.from({ length: 10 }, () => a.next())).toEqual(
+      Array.from({ length: 10 }, () => b.next()),
+    );
   });
 
   it('different fork labels give different streams', () => {

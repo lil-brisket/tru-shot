@@ -10,13 +10,16 @@
     "packages/*"
   ],
   "scripts": {
+    "lint": "biome check .",
+    "format": "biome check --write .",
     "typecheck": "npm run typecheck --workspaces --if-present",
     "test": "npm run test:sim && npm run test:scripts",
     "test:sim": "npm run test --workspace @true-shot/sim",
     "test:scripts": "node --test scripts/check-plan.test.mjs",
-    "verify": "npm run typecheck && npm test"
+    "verify": "npm run lint && npm run typecheck && npm test"
   },
   "devDependencies": {
+    "@biomejs/biome": "2.5.15",
     "@types/node": "^22.0.0",
     "typescript": "^5.6.0",
     "vitest": "^3.0.0"
