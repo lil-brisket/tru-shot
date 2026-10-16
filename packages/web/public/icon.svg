@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+<title>True Shot</title>
+<defs><clipPath id="ball"><circle cx="256" cy="256" r="176"/></clipPath></defs>
+<rect width="512" height="512" fill="#14181f"/>
+<circle cx="256" cy="256" r="176" fill="#f28c28"/>
+<g clip-path="url(#ball)" fill="none" stroke="#14181f" stroke-width="12">
+<path d="M256 0V512M0 256H512"/><circle cx="-30" cy="256" r="210"/><circle cx="542" cy="256" r="210"/>
+</g>
+</svg>

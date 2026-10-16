@@ -13,6 +13,7 @@
     "dev": "npm run dev --workspace @true-shot/web",
     "dev:lan": "npm run dev --workspace @true-shot/web -- --host",
     "build": "npm run build --workspace @true-shot/web",
+    "preview": "npm run build && npm run preview --workspace @true-shot/web",
     "lint": "biome check .",
     "format": "biome check --write .",
     "typecheck": "npm run typecheck --workspaces --if-present",
