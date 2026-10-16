@@ -10,13 +10,17 @@
     "packages/*"
   ],
   "scripts": {
+    "dev": "npm run dev --workspace @true-shot/web",
+    "dev:lan": "npm run dev --workspace @true-shot/web -- --host",
+    "build": "npm run build --workspace @true-shot/web",
     "lint": "biome check .",
     "format": "biome check --write .",
     "typecheck": "npm run typecheck --workspaces --if-present",
-    "test": "npm run test:sim && npm run test:scripts",
+    "test": "npm run test:sim && npm run test:web && npm run test:scripts",
+    "test:web": "npm run test --workspace @true-shot/web",
     "test:sim": "npm run test --workspace @true-shot/sim",
     "test:scripts": "node --test scripts/check-plan.test.mjs",
-    "verify": "npm run lint && npm run typecheck && npm test"
+    "verify": "npm run lint && npm run typecheck && npm test && npm run build"
   },
   "devDependencies": {
     "@biomejs/biome": "2.5.15",
