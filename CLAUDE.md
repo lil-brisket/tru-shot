@@ -7,7 +7,12 @@ True Shot is a fictional-content basketball game (GM, Career and Dynasty modes) 
 - `npm install` — set up.
 - `npm run verify` — typecheck, all tests, plan-gate tests. **Must be green before any PR.**
 - `npm run typecheck`, `npm test`, `npm run test:sim`, `npm run test:scripts` — parts of verify.
-- `node scripts/check-plan.mjs` — run the plan gate locally (needs `BASE_REF`, default `origin/main`, and `PR_BODY`).
+- `node scripts/check-plan.mjs` — run the plan gate locally (needs `BASE_REF`, default `origin/main`, and `PR_BODY`)
+- `npm run lint` - Lint check
+- `npm run format` - Format
+- `npm run dev` - dev build
+- `npm run dev:lan` - dev lan build
+- `npm run build` - builds
 - More commands (`dev`, `sim:batch`, Playwright) appear as plans add them. Update this list through a plan request.
 
 ## The workflow: PLAN → APPROVE → BUILD → VERIFY → PR
